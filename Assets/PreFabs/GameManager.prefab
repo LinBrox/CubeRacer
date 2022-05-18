@@ -44,5 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278598a8115e4404d922578c4457dfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamehasEnded: 0
   restartDelay: 1
   compleLevelUI: {fileID: 0}
+  playerMovement: {fileID: 7715294214328345982, guid: b736d52a1ab663d44ab7c748214cf7cd, type: 3}

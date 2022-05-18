@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
+    public GameManager gameManager;
     public float forwardForce = 1000f;
     public float sidewaysForce = 500f;
     public float jumpForce = 100f;
@@ -47,8 +48,13 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(rb.velocity);
         if (rb.position.y < -1f)
         {
-            FindObjectOfType<GameManager>().EndGame();
+            gameManager.EndGame();
         }
+    }
+
+    public void PlayerStopMovement()
+    {
+        this.rb.velocity = new Vector3 (0, 0, 0);
     }
 }
     

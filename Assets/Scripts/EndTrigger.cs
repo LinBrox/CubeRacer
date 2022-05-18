@@ -6,7 +6,8 @@ public class EndTrigger : MonoBehaviour {
 
     void OnTriggerEnter ()
     {
-        gameManager.CompleteLevel();
+        if(!gameManager.gamehasEnded)
+            gameManager.CompleteLevel();
     }
 
 }
